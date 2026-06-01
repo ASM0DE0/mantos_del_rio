@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-warm-glow text-deep-blue transition-colors duration-300;
+  }
+
+  .dark body,
+  body.dark {
+    @apply bg-deep-blue text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold-soft;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-glass rounded-2xl;
+  }
+
+  .dark .glass-panel {
+    @apply bg-white/5 border-white/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
+      bg-gold-soft text-deep-blue font-semibold
+      hover:bg-gold-light hover:shadow-gold
+      transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold-soft;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
+      border-2 border-white/40 text-white font-medium
+      hover:bg-white/10 hover:border-gold-soft
+      transition-all duration-300;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-deep-blue dark:text-white;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-deep-navy/80 dark:text-white/70 max-w-2xl;
+  }
+}
+
+/* FullCalendar theme */
+.fc {
+  --fc-border-color: rgba(212, 175, 55, 0.2);
+  --fc-button-bg-color: #122a4a;
+  --fc-button-border-color: #d4af37;
+  --fc-button-hover-bg-color: #d4af37;
+  --fc-button-hover-border-color: #d4af37;
+  --fc-button-active-bg-color: #d4af37;
+  --fc-today-bg-color: rgba(212, 175, 55, 0.12);
+}
+
+.dark .fc {
+  --fc-page-bg-color: transparent;
+  --fc-neutral-bg-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
