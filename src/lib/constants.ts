@@ -1,4 +1,5 @@
 /** Canal oficial de YouTube */
+import pastorImg from '../assets/pastor.luis.jpg'
 export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@impchmantosdelrio1696'
 
 export const CHURCH = {
@@ -11,7 +12,7 @@ export const CHURCH = {
     name: 'Luis Valdes',
     title: 'Pastor principal',
     bio: 'Pastor Luis Valdes lidera Mantos del Río en Talca con pasión por el evangelio, formando discípulos y sirviendo a la comunidad del Maule con amor y dedicación.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    image: pastorImg,
   },
   history:
     'Mantos del Río es una comunidad de fe en Talca, Región del Maule, comprometida con la adoración, la palabra de Dios y el servicio a las familias de nuestra ciudad.',
