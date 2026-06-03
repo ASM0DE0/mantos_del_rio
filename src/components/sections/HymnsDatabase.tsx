@@ -14,7 +14,7 @@ import {
 } from '@/lib/hymnsSource'
 
 const FAVORITES_KEY = 'church-song-favorites'
-const PAGE_SIZE = 60
+const PAGE_SIZE = 6
 
 export function HymnsDatabase() {
   const [catalog, setCatalog] = useState<HymnCatalogEntry[]>([])
